@@ -38,12 +38,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "http_log.h"
 #include "http_request.h"
 
-module AP_MODULE_DECLARE_DATA evasive_module;
+module AP_MODULE_DECLARE_DATA evasive24_module;
 
 /* BEGIN DoS Evasive Maneuvers Definitions */
 
 #define MAILER	"/bin/mail %s"
-#define  LOG( A, ... ) { openlog("mod_evasive20", LOG_PID, LOG_DAEMON); syslog( A, __VA_ARGS__ ); closelog(); }
+#define  LOG( A, ... ) { openlog("mod_evasive", LOG_PID, LOG_DAEMON); syslog( A, __VA_ARGS__ ); closelog(); }
 
 #define DEFAULT_HASH_TBL_SIZE   3097ul  // Default hash table size
 #define DEFAULT_PAGE_COUNT      2       // Default maximum page hit count per interval
@@ -686,7 +686,7 @@ static void register_hooks(apr_pool_t *p) {
   apr_pool_cleanup_register(p, NULL, apr_pool_cleanup_null, destroy_hit_list);
 };
 
-module AP_MODULE_DECLARE_DATA evasive20_module =
+module AP_MODULE_DECLARE_DATA evasive24_module =
 {
     STANDARD20_MODULE_STUFF,
     NULL,
