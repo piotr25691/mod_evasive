@@ -168,9 +168,9 @@ static int access_checker(request_rec *r)
             /* Reset our hit count list as necessary */
             if (t-n->timestamp>=page_interval) {
               n->count=0;
+	      n->timestamp = t;
             }
           }
-          n->timestamp = t;
           n->count++;
         } else {
           ntt_insert(hit_list, hash_key, t);
@@ -190,9 +190,9 @@ static int access_checker(request_rec *r)
             /* Reset our hit count list as necessary */
             if (t-n->timestamp>=site_interval) {
               n->count=0;
+	      n->timestamp = t;
             }
           }
-          n->timestamp = t;
           n->count++;
         } else {
           ntt_insert(hit_list, hash_key, t);
