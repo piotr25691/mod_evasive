@@ -38,7 +38,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "http_log.h"
 #include "http_request.h"
 
-module AP_MODULE_DECLARE_DATA evasive20_module;
+module AP_MODULE_DECLARE_DATA evasive_module;
 
 /* BEGIN DoS Evasive Maneuvers Definitions */
 
