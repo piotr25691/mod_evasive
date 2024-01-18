@@ -43,7 +43,7 @@ module AP_MODULE_DECLARE_DATA evasive_module;
 /* BEGIN DoS Evasive Maneuvers Definitions */
 
 #define MAILER	"/bin/mail %s"
-#define  LOG( A, ... ) { openlog("mod_evasive", LOG_PID, LOG_DAEMON); syslog( A, __VA_ARGS__ ); closelog(); }
+#define  LOG( A, ... ) { openlog("mod_evasive20", LOG_PID, LOG_DAEMON); syslog( A, __VA_ARGS__ ); closelog(); }
 
 #define DEFAULT_HASH_TBL_SIZE   3097ul  // Default hash table size
 #define DEFAULT_PAGE_COUNT      2       // Default maximum page hit count per interval
